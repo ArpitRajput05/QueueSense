@@ -1,0 +1,22 @@
+# Node.js
+frontend/node_modules/
+frontend/dist/
+frontend/.npm/
+
+# Java / Maven
+backend/target/
+backend/.mvn/
+
+# Python
+data_analysis/__pycache__/
+*.pyc
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
