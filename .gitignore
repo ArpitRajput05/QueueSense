@@ -20,3 +20,11 @@ data_analysis/__pycache__/
 *.njsproj
 *.sln
 *.sw?
+
+# Python FastAPI
+backend/venv/
+backend/__pycache__/
+backend/app/__pycache__/
+*.db
+*.sqlite3
+.env
