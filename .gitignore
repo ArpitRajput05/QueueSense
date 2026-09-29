@@ -28,3 +28,6 @@ backend/app/__pycache__/
 *.db
 *.sqlite3
 .env
+
+# Root Node modules
+node_modules/

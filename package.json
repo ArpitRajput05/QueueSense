@@ -1,0 +1,11 @@
+{
+  "name": "queuesense",
+  "version": "1.0.0",
+  "description": "Root project to run frontend and backend together",
+  "scripts": {
+    "dev": "concurrently -c \"cyan,magenta\" -n \"BACKEND,FRONTEND\" \"cd backend && .\\venv\\Scripts\\python.exe -m uvicorn app.main:app --reload\" \"cd frontend && npm run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
