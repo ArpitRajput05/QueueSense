@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database import engine, Base
-from app.routers import organizations, queues, tickets
+from app.routers import organizations, queues, tickets, analytics
 from app.config import settings
 
 # Create database tables
@@ -25,6 +25,7 @@ app.add_middleware(
 app.include_router(organizations.router, prefix="/api/organizations", tags=["Organizations"])
 app.include_router(queues.router, prefix="/api/queues", tags=["Queues"])
 app.include_router(tickets.router, prefix="/api/tickets", tags=["Tickets"])
+app.include_router(analytics.router, prefix="/api/analytics", tags=["Analytics"])
 
 @app.get("/")
 def read_root():

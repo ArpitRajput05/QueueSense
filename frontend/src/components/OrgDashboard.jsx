@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Megaphone, Users, Clock, PlusCircle } from 'lucide-react';
-
+import AnalyticsDashboard from './AnalyticsDashboard';
 const API_BASE = 'http://localhost:8000/api';
 
 const OrgDashboard = () => {
@@ -181,6 +181,11 @@ const OrgDashboard = () => {
               </form>
               <p className="text-xs text-gray-500 mt-2">This message will instantly appear on all customers' screens.</p>
             </div>
+
+            {/* Analytics Dashboard added here */}
+            {selectedQueue?.organization_id && (
+              <AnalyticsDashboard orgId={selectedQueue.organization_id} />
+            )}
 
           </div>
 
